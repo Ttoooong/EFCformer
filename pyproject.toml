@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hotspot-assistant"
+version = "0.1.0"
+description = "Free intelligent hotspot collection assistant"
+requires-python = ">=3.11"
+dependencies = [
+    "apscheduler",
+    "beautifulsoup4",
+    "feedparser",
+    "jieba",
+    "python-dateutil",
+    "requests",
+]
+
+[project.scripts]
+hotspot = "hotspot.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
